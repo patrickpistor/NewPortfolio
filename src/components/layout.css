@@ -23,7 +23,7 @@ body {
 }
 
 .small-space-horizontal {
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
 a {
@@ -111,6 +111,12 @@ a:hover:before {
   justify-content: center;
   text-align: center;
   height: 100vh;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .dark-bg {
@@ -227,7 +233,6 @@ h4 {
   font-weight: normal;
   line-height: normal;
   font-size: 18px;
-
   color: #c2ad8f;
 }
 
@@ -242,100 +247,46 @@ h4 {
   color: #737372;
 }
 
-.floating-label {
-  position: relative;
-  margin-bottom: 20px;
-  line-height: 1;
-  letter-spacing: 3px;
-}
-.floating-input,
-.floating-select {
+.textbox {
   border: none;
   font-size: 14px;
-  border-radius: 100px;
+  border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(45, 35, 66, 0.25), inset 0px -2px 0px #222;
-  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
   padding: 20px 25px;
   font-weight: 200;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+  resize: none;
 }
 
-.floating-input:focus,
-.floating-select:focus {
+.textarea {
+  height: 135px;
+}
+
+.textbox::placeholder {
+  color: #ebf1f6;
+  opacity: 1;
+}
+
+.textbox:focus {
   outline: none;
   background-color: #333;
 }
-
-label {
-  color: #999;
-  font-size: 14px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 26px;
-  top: 20px;
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-  line-height: 1;
-  letter-spacing: 3px;
-}
-
-.floating-input:focus ~ label,
-.floating-input:not(:placeholder-shown) ~ label {
-  top: -15px;
-  font-size: 14px;
-  color: #3b3b3b;
-}
-
-.floating-select:focus ~ label,
-.floating-select:not([value=""]):valid ~ label {
-  top: -18px;
-  font-size: 14px;
-  color: #3b3b3b;
-}
-
-.floating-input:focus ~ .bar:before,
-.floating-input:focus ~ .bar:after,
-.floating-select:focus ~ .bar:before,
-.floating-select:focus ~ .bar:after {
+.textbox:focus ~ .bar:before,
+.textbox:focus ~ .bar:after {
   width: 50%;
 }
 
-.floating-input:focus ~ .highlight,
-.floating-select:focus ~ .highlight {
-  -webkit-animation: inputHighlighter 0.3s ease;
-  -moz-animation: inputHighlighter 0.3s ease;
-  animation: inputHighlighter 0.3s ease;
-}
-
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #3b3b3b;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-@-moz-keyframes inputHighlighter {
-  from {
-    background: #3b3b3b;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-@keyframes inputHighlighter {
-  from {
-    background: #3b3b3b;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
+.textbox:-webkit-autofill,
+.textbox:-webkit-autofill:hover,
+.textbox:-webkit-autofill:focus,
+.textbox:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.8) inset !important;
+  -webkit-text-fill-color: #ebf1f6 !important;
 }
 
 .button {
@@ -363,17 +314,16 @@ label {
   transition-delay: 0s, 0s, 0s, 0s;
   will-change: box-shadow, transform;
   color: #fff;
-  margin-top: 16px;
+  margin-bottom: 16px;
   padding-left: 24px;
   padding-right: 24px;
-  margin-bottom: 16px;
   border: 0;
-  border-radius: 8px;
+  border-radius: 5px;
   margin-left: 0;
   margin-right: 0;
   line-height: 1;
   letter-spacing: 3px;
-  width: 75px;
+  width: 100%;
 }
 
 .button:hover {
@@ -410,11 +360,9 @@ label {
 .button p {
   text-align: center;
   font-size: 14px;
-  padding: 2px 0;
 }
 
 .outline {
-  margin-top: 16px;
   cursor: pointer;
   line-height: 1;
   letter-spacing: 3px;
@@ -424,8 +372,8 @@ label {
   margin-left: 0;
   margin-right: 0;
   border: 1px solid #333;
-  border-radius: 3px;
-  width: 75px;
+  border-radius: 5px;
+  width: 100%;
   transition: all 0.3s ease;
 }
 

@@ -115,15 +115,22 @@ const IndexPage = () => (
     <div className="container dark-tan-bg" />
     <div className="container off-white-bg" />
     <div className="container">
-      <div className="floating-label">
-        <input className="floating-input" type="text" placeholder=" " />
-        <label>NAME</label>
-      </div>
-      <div className="button">
-        <p>SUBMIT</p>
-      </div>
-      <div className="outline">
-        <p>CANCEL</p>
+      <div className="left">
+        <input className="textbox" type="text" placeholder="FIRST NAME" />
+        <input className="textbox" type="text" placeholder="LAST NAME" />
+        <input className="textbox" type="text" placeholder="EMAIL" />
+        <textarea
+          className="textbox textarea"
+          type="text"
+          placeholder="MESSAGE"
+        />
+        <div className="button">
+          <p>SUBMIT</p>
+        </div>
+        <div className="small-space-horizontal" />
+        <div className="outline">
+          <p>CANCEL</p>
+        </div>
       </div>
     </div>
   </Layout>
