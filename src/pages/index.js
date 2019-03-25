@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <div className="container">
+    <div className="container-column">
       <h1 className="h1-on-light">H1</h1>
       <h2 className="on-light-text">H2</h2>
       <h3 className="on-light-text">H3</h3>
@@ -59,7 +59,7 @@ const IndexPage = () => (
         Hover This Link
       </Link>
     </div>
-    <div className="container dark-bg">
+    <div className="container-column dark-bg">
       <h1 className="on-dark-text">H1</h1>
       <h2 className="on-dark-text">H2</h2>
       <h3 className="on-dark-text">H3</h3>
@@ -111,25 +111,37 @@ const IndexPage = () => (
         Hover This Link
       </Link>
     </div>
-    <div className="container tan-bg" />
-    <div className="container dark-tan-bg" />
-    <div className="container off-white-bg" />
-    <div className="container">
+    <div className="container-column tan-bg" />
+    <div className="container-column dark-tan-bg" />
+    <div className="container-column off-white-bg" />
+    <div className="container-row">
       <div className="left">
-        <input className="textbox" type="text" placeholder="FIRST NAME" />
-        <input className="textbox" type="text" placeholder="LAST NAME" />
-        <input className="textbox" type="text" placeholder="EMAIL" />
-        <textarea
-          className="textbox textarea"
-          type="text"
-          placeholder="MESSAGE"
-        />
-        <div className="button">
-          <p>SUBMIT</p>
+        <div className="text-container">
+          <h2 className="on-light">Title</h2>
+          <p className="large-text on-light-text">
+            Framer X offers tools to design scroll, link and page interactions.
+            But don’t stop there—add a 3D effect or momentum. Create flows that
+            feel real. And do it all in half the time.
+          </p>
         </div>
-        <div className="small-space-horizontal" />
-        <div className="outline">
-          <p>CANCEL</p>
+      </div>
+      <div className="left">
+        <div className="form-container">
+          <input className="textbox" type="text" placeholder="FIRST NAME" />
+          <input className="textbox" type="text" placeholder="LAST NAME" />
+          <input className="textbox" type="text" placeholder="EMAIL" />
+          <textarea
+            className="textbox textarea"
+            type="text"
+            placeholder="MESSAGE"
+          />
+          <div className="button">
+            <p>SUBMIT</p>
+          </div>
+          <div className="small-space-horizontal" />
+          <div className="outline">
+            <p>CANCEL</p>
+          </div>
         </div>
       </div>
     </div>
